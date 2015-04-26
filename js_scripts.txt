@@ -1,0 +1,10 @@
+HTTP_HOST
+HTTP_REFERER
+
+<script type="text/javascript" src="http://127.0.0.1:8000/trackvisitor"></script>
+
+<script  type="text/javascript">
+    document.write('<script type="text\/javascript" src="http:\/\/127.0.0.1:8000\/trackvisitor?url=iiii">');
+    document.write('<\/script>');
+
+</script>

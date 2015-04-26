@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block caption %}<h1> List of all visitors of the pages</h1>{% endblock %}
+
+{% block content %}
+<table style="border:1px solid black;border-collapse:collapse">
+    <tr style="border:1px solid black;border-collapse:collapse">
+      <th style="border:1px solid black;border-collapse:collapse">organization name</th>
+      <th style="border:1px solid black;border-collapse:collapse">organization address</th>
+      <th style="border:1px solid black;border-collapse:collapse">country</th>
+      <th style="border:1px solid black;border-collapse:collapse">ip address</th>
+      <th style="border:1px solid black;border-collapse:collapse">datetime of visit</th>
+      <th style="border:1px solid black;border-collapse:collapse">visited page url</th>
+      <th style="border:1px solid black;border-collapse:collapse">referer url</th>
+    </tr>
+
+    {% for row in rows %}
+      <tr style="border:1px solid black;border-collapse:collapse">
+        <td style="border:1px solid black;border-collapse:collapse">
+          {{ row.organization_name }}
+        </td>
+        <td style="border:1px solid black;border-collapse:collapse">
+          {{ row.organization_address }}
+        </td>
+        <td style="border:1px solid black;border-collapse:collapse">
+          {{ row.country }}
+        </td>
+        <td style="border:1px solid black;border-collapse:collapse">
+          {{ row.ip_address }}
+        </td>
+        <td style="border:1px solid black;border-collapse:collapse">
+          {{ row.datetime_of_visit }}
+        </td>
+        <td style="border:1px solid black;border-collapse:collapse">
+          {{ row.page_url }}
+        </td>
+        <td style="border:1px solid black;border-collapse:collapse">
+          {{ row.referer_url }}
+        </td>
+
+      </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}

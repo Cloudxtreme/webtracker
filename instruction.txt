@@ -1,0 +1,32 @@
+Here is the login for our pythonanywhere account.
+UN : dan@emizr.com
+PW: charlene3
+
+
+How to install webtracker:
+
+source virtualenvwrapper.sh
+# mkvirtualenv django16 --system-site-packages
+workon  django16
+The prompt will look like
+	(django16)14:51 ~ $
+Testing:
+	which pip
+The answer will be like
+	/home/virtualenvdemo/.virtualenvs/django16/bin/pip
+cd webtracker
+python manage.py syncdb
+python manage.py migrate home
+
+
+MySql commands:
+show tables; 
+use dsyhan$webtracker
+drop database dsyhan$webtracker;
+
+
+How to start Celery server for webtracker:
+
+1) activate virtual environment: activate.bat from C:\Users\psa\ve_webtracker\Scripts
+2) go to webtracker dir
+3) celery -A webtracker worker -l info

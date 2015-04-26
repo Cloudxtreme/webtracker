@@ -1,0 +1,1209 @@
+DEBUG:root:Unknown WHOIS_MODE from settings.py: scheduler1
+WARNING:py.warnings:C:\Users\psa\ve_webtracker\lib\site-packages\django\db\models\fields\__init__.py:903: RuntimeWarning: DateTimeField VisitorQueue.datetime_of_visit received a naive datetime (2014-08-08 18:01:19.634000) while time zone support is active.
+  RuntimeWarning)
+
+DEBUG:django.db.backends:(0.007) INSERT INTO `wt_visitor_queue` (`visitor_ip`, `referer_url`, `page_url`, `datetime_of_visit`) VALUES ('127.0.0.1', '', 'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', '2014-08-08 18:01:19'); args=['127.0.0.1', '', u'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', u'2014-08-08 18:01:19']
+WARNING:py.warnings:C:\Users\psa\ve_webtracker\lib\site-packages\django\db\models\fields\__init__.py:903: RuntimeWarning: DateTimeField VisitorQueue.datetime_of_visit received a naive datetime (2014-08-08 18:01:23.191000) while time zone support is active.
+  RuntimeWarning)
+
+DEBUG:django.db.backends:(0.002) INSERT INTO `wt_visitor_queue` (`visitor_ip`, `referer_url`, `page_url`, `datetime_of_visit`) VALUES ('127.0.0.1', '', 'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', '2014-08-08 18:01:23'); args=['127.0.0.1', '', u'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', u'2014-08-08 18:01:23']
+DEBUG:django.db.backends:(0.011) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:root:e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-08 20:01:41.389000
+INFO:root:sent the message: e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-08 20:01:41.389000
+DEBUG:django.db.backends:(0.010) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:root:Unknown WHOIS_MODE from settings.py: task queue1
+DEBUG:django.db.backends:(0.007) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.124) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.024) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.013) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.032) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:root:e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-09 21:50:40.731000
+INFO:root:sent the message: e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-09 21:50:40.731000
+DEBUG:django.db.backends:(0.023) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.007) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.002) SELECT `djkombu_queue`.`id`, `djkombu_queue`.`name` FROM `djkombu_queue` WHERE `djkombu_queue`.`name` = 'celery' ; args=('celery',)
+DEBUG:django.db.backends:(0.002) SELECT `djkombu_queue`.`id`, `djkombu_queue`.`name` FROM `djkombu_queue` WHERE `djkombu_queue`.`name` = 'celery' ; args=('celery',)
+DEBUG:django.db.backends:(0.013) SELECT COUNT(*) FROM `djkombu_message` WHERE `djkombu_message`.`queue_id` = 1 ; args=(1,)
+DEBUG:django.db.backends:(0.002) SELECT `djkombu_queue`.`id`, `djkombu_queue`.`name` FROM `djkombu_queue` WHERE `djkombu_queue`.`name` = 'celery' ; args=('celery',)
+DEBUG:django.db.backends:(0.012) INSERT INTO `djkombu_message` (`visible`, `sent_at`, `payload`, `queue_id`) VALUES (1, '2014-08-09 19:00:15', '{\"body\": \"gAJ9cQEoVQdleHBpcmVzcQJOVQN1dGNxA4hVBGFyZ3NxBChVCTEyNy4wLjAuMXEFVQBYOwAAAGZpbGU6Ly8vRDovcHNhL1B5Q2hhcm1Qcmovd2VidHJhY2tlci9jbGllbnRfc2l0ZS9wYWdlMS5odG1scQZjZGF0ZXRpbWUKZGF0ZXRpbWUKcQdVCgfeCAkWAA4L01iFUnEIdHEJVQVjaG9yZHEKTlUJY2FsbGJhY2tzcQtOVQhlcnJiYWNrc3EMTlUHdGFza3NldHENTlUCaWRxDlUkNTA3ZGZjMTItYjYwYy00OWMzLTlkMDAtMjJlYjgwNzQ2Y2M3cQ9VB3JldHJpZXNxEEsAVQR0YXNrcRFVFWhvbWUudGFza3MuZmluZF93aG9pc3ESVQl0aW1lbGltaXRxE05OhlUDZXRhcRROVQZrd2FyZ3NxFX1xFnUu\", \"headers\": {}, \"content-type\": \"application/x-python-serialize\", \"properties\": {\"body_encoding\": \"base64\", \"correlation_id\": \"507dfc12-b60c-49c3-9d00-22eb80746cc7\", \"reply_to\": \"2a938d12-5d7e-3fb9-80d8-b8b8084a5096\", \"delivery_info\": {\"priority\": 0, \"routing_key\": \"celery\", \"exchange\": \"celery\"}, \"delivery_mode\": 2, \"delivery_tag\": \"e9234251-1118-48d6-80e9-e03aff7582f0\"}, \"content-encoding\": \"binary\"}', 1); args=[True, u'2014-08-09 19:00:15', '{"body": "gAJ9cQEoVQdleHBpcmVzcQJOVQN1dGNxA4hVBGFyZ3NxBChVCTEyNy4wLjAuMXEFVQBYOwAAAGZpbGU6Ly8vRDovcHNhL1B5Q2hhcm1Qcmovd2VidHJhY2tlci9jbGllbnRfc2l0ZS9wYWdlMS5odG1scQZjZGF0ZXRpbWUKZGF0ZXRpbWUKcQdVCgfeCAkWAA4L01iFUnEIdHEJVQVjaG9yZHEKTlUJY2FsbGJhY2tzcQtOVQhlcnJiYWNrc3EMTlUHdGFza3NldHENTlUCaWRxDlUkNTA3ZGZjMTItYjYwYy00OWMzLTlkMDAtMjJlYjgwNzQ2Y2M3cQ9VB3JldHJpZXNxEEsAVQR0YXNrcRFVFWhvbWUudGFza3MuZmluZF93aG9pc3ESVQl0aW1lbGltaXRxE05OhlUDZXRhcRROVQZrd2FyZ3NxFX1xFnUu", "headers": {}, "content-type": "application/x-python-serialize", "properties": {"body_encoding": "base64", "correlation_id": "507dfc12-b60c-49c3-9d00-22eb80746cc7", "reply_to": "2a938d12-5d7e-3fb9-80d8-b8b8084a5096", "delivery_info": {"priority": 0, "routing_key": "celery", "exchange": "celery"}, "delivery_mode": 2, "delivery_tag": "e9234251-1118-48d6-80e9-e03aff7582f0"}, "content-encoding": "binary"}', 1]
+DEBUG:django.db.backends:(0.007) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.019) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.041) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.007) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.013) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+WARNING:py.warnings:C:\Users\psa\ve_webtracker\lib\site-packages\django\db\models\fields\__init__.py:903: RuntimeWarning: DateTimeField VisitorQueue.datetime_of_visit received a naive datetime (2014-08-09 22:03:47.693000) while time zone support is active.
+  RuntimeWarning)
+
+DEBUG:django.db.backends:(0.003) INSERT INTO `wt_visitor_queue` (`visitor_ip`, `referer_url`, `page_url`, `datetime_of_visit`) VALUES ('127.0.0.1', '', 'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', '2014-08-09 22:03:47'); args=['127.0.0.1', '', u'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', u'2014-08-09 22:03:47']
+DEBUG:django.db.backends:(0.017) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.019) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+WARNING:py.warnings:C:\Users\psa\ve_webtracker\lib\site-packages\django\db\models\fields\__init__.py:903: RuntimeWarning: DateTimeField VisitorQueue.datetime_of_visit received a naive datetime (2014-08-09 22:04:00.249000) while time zone support is active.
+  RuntimeWarning)
+
+DEBUG:django.db.backends:(0.004) INSERT INTO `wt_visitor_queue` (`visitor_ip`, `referer_url`, `page_url`, `datetime_of_visit`) VALUES ('127.0.0.1', '', 'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', '2014-08-09 22:04:00'); args=['127.0.0.1', '', u'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', u'2014-08-09 22:04:00']
+WARNING:py.warnings:C:\Users\psa\ve_webtracker\lib\site-packages\django\db\models\fields\__init__.py:903: RuntimeWarning: DateTimeField VisitorQueue.datetime_of_visit received a naive datetime (2014-08-09 22:04:02.022000) while time zone support is active.
+  RuntimeWarning)
+
+DEBUG:django.db.backends:(0.010) INSERT INTO `wt_visitor_queue` (`visitor_ip`, `referer_url`, `page_url`, `datetime_of_visit`) VALUES ('127.0.0.1', '', 'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', '2014-08-09 22:04:02'); args=['127.0.0.1', '', u'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', u'2014-08-09 22:04:02']
+DEBUG:django.db.backends:(0.124) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.053) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.015) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.017) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.014) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.018) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.015) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.020) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.003) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.016) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.003) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.014) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.016) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.021) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.009) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.022) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.023) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.019) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.021) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.023) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.015) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.009) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.020) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.018) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.020) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.011) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.020) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.029) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.016) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.027) SELECT `djkombu_queue`.`id`, `djkombu_queue`.`name` FROM `djkombu_queue` WHERE `djkombu_queue`.`name` = 'celery' ; args=('celery',)
+DEBUG:django.db.backends:(0.004) SELECT `djkombu_queue`.`id`, `djkombu_queue`.`name` FROM `djkombu_queue` WHERE `djkombu_queue`.`name` = 'celery' ; args=('celery',)
+DEBUG:django.db.backends:(0.022) SELECT COUNT(*) FROM `djkombu_message` WHERE `djkombu_message`.`queue_id` = 1 ; args=(1,)
+DEBUG:django.db.backends:(0.004) SELECT `djkombu_queue`.`id`, `djkombu_queue`.`name` FROM `djkombu_queue` WHERE `djkombu_queue`.`name` = 'celery' ; args=('celery',)
+DEBUG:django.db.backends:(0.006) INSERT INTO `djkombu_message` (`visible`, `sent_at`, `payload`, `queue_id`) VALUES (1, '2014-08-14 12:19:37', '{\"body\": \"gAJ9cQEoVQdleHBpcmVzcQJOVQN1dGNxA4hVBGFyZ3NxBChVCTEyNy4wLjAuMXEFVQBYOwAAAGZpbGU6Ly8vRDovcHNhL1B5Q2hhcm1Qcmovd2VidHJhY2tlci9jbGllbnRfc2l0ZS9wYWdlMS5odG1scQZjZGF0ZXRpbWUKZGF0ZXRpbWUKcQdVCgfeCA4PExcCTdiFUnEIdHEJVQVjaG9yZHEKTlUJY2FsbGJhY2tzcQtOVQhlcnJiYWNrc3EMTlUHdGFza3NldHENTlUCaWRxDlUkZDJkMTYxZDUtNGVlZS00YzcyLTkyNTUtOTk1MDhkYWUyYzU3cQ9VB3JldHJpZXNxEEsAVQR0YXNrcRFVFWhvbWUudGFza3MuZmluZF93aG9pc3ESVQl0aW1lbGltaXRxE05OhlUDZXRhcRROVQZrd2FyZ3NxFX1xFnUu\", \"headers\": {}, \"content-type\": \"application/x-python-serialize\", \"properties\": {\"body_encoding\": \"base64\", \"correlation_id\": \"d2d161d5-4eee-4c72-9255-99508dae2c57\", \"reply_to\": \"a2c6e7e8-6a04-3c7e-8159-4bc9ab8c693b\", \"delivery_info\": {\"priority\": 0, \"routing_key\": \"celery\", \"exchange\": \"celery\"}, \"delivery_mode\": 2, \"delivery_tag\": \"3a8beae5-63bd-4955-81e7-1b02c796f5e3\"}, \"content-encoding\": \"binary\"}', 1); args=[True, u'2014-08-14 12:19:37', '{"body": "gAJ9cQEoVQdleHBpcmVzcQJOVQN1dGNxA4hVBGFyZ3NxBChVCTEyNy4wLjAuMXEFVQBYOwAAAGZpbGU6Ly8vRDovcHNhL1B5Q2hhcm1Qcmovd2VidHJhY2tlci9jbGllbnRfc2l0ZS9wYWdlMS5odG1scQZjZGF0ZXRpbWUKZGF0ZXRpbWUKcQdVCgfeCA4PExcCTdiFUnEIdHEJVQVjaG9yZHEKTlUJY2FsbGJhY2tzcQtOVQhlcnJiYWNrc3EMTlUHdGFza3NldHENTlUCaWRxDlUkZDJkMTYxZDUtNGVlZS00YzcyLTkyNTUtOTk1MDhkYWUyYzU3cQ9VB3JldHJpZXNxEEsAVQR0YXNrcRFVFWhvbWUudGFza3MuZmluZF93aG9pc3ESVQl0aW1lbGltaXRxE05OhlUDZXRhcRROVQZrd2FyZ3NxFX1xFnUu", "headers": {}, "content-type": "application/x-python-serialize", "properties": {"body_encoding": "base64", "correlation_id": "d2d161d5-4eee-4c72-9255-99508dae2c57", "reply_to": "a2c6e7e8-6a04-3c7e-8159-4bc9ab8c693b", "delivery_info": {"priority": 0, "routing_key": "celery", "exchange": "celery"}, "delivery_mode": 2, "delivery_tag": "3a8beae5-63bd-4955-81e7-1b02c796f5e3"}, "content-encoding": "binary"}', 1]
+DEBUG:django.db.backends:(0.016) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.026) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.019) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.013) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.017) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.017) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.019) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.020) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.012) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.021) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.017) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.018) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.041) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.019) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.017) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.020) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.014) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.019) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.003) SELECT `djkombu_queue`.`id`, `djkombu_queue`.`name` FROM `djkombu_queue` WHERE `djkombu_queue`.`name` = 'celery' ; args=('celery',)
+DEBUG:django.db.backends:(0.004) SELECT `djkombu_queue`.`id`, `djkombu_queue`.`name` FROM `djkombu_queue` WHERE `djkombu_queue`.`name` = 'celery' ; args=('celery',)
+DEBUG:django.db.backends:(0.003) SELECT COUNT(*) FROM `djkombu_message` WHERE `djkombu_message`.`queue_id` = 1 ; args=(1,)
+DEBUG:django.db.backends:(0.003) SELECT `djkombu_queue`.`id`, `djkombu_queue`.`name` FROM `djkombu_queue` WHERE `djkombu_queue`.`name` = 'celery' ; args=('celery',)
+DEBUG:django.db.backends:(0.003) INSERT INTO `djkombu_message` (`visible`, `sent_at`, `payload`, `queue_id`) VALUES (1, '2014-08-14 12:37:47', '{\"body\": \"gAJ9cQEoVQdleHBpcmVzcQJOVQN1dGNxA4hVBGFyZ3NxBChVCTEyNy4wLjAuMXEFVQBYOwAAAGZpbGU6Ly8vRDovcHNhL1B5Q2hhcm1Qcmovd2VidHJhY2tlci9jbGllbnRfc2l0ZS9wYWdlMS5odG1scQZjZGF0ZXRpbWUKZGF0ZXRpbWUKcQdVCgfeCA4PJS4JJ8CFUnEIdHEJVQVjaG9yZHEKTlUJY2FsbGJhY2tzcQtOVQhlcnJiYWNrc3EMTlUHdGFza3NldHENTlUCaWRxDlUkNmJjNGE0MGYtOTEwNi00NzIzLTk2YmUtODQzMDA3NTI4OTQycQ9VB3JldHJpZXNxEEsAVQR0YXNrcRFVFWhvbWUudGFza3MuZmluZF93aG9pc3ESVQl0aW1lbGltaXRxE05OhlUDZXRhcRROVQZrd2FyZ3NxFX1xFnUu\", \"headers\": {}, \"content-type\": \"application/x-python-serialize\", \"properties\": {\"body_encoding\": \"base64\", \"correlation_id\": \"6bc4a40f-9106-4723-96be-843007528942\", \"reply_to\": \"1c5c97f8-8946-3d1e-b5a5-a0d48b61ab2e\", \"delivery_info\": {\"priority\": 0, \"routing_key\": \"celery\", \"exchange\": \"celery\"}, \"delivery_mode\": 2, \"delivery_tag\": \"3e6d9d2f-1c8e-458d-a112-abf7a640acd7\"}, \"content-encoding\": \"binary\"}', 1); args=[True, u'2014-08-14 12:37:47', '{"body": "gAJ9cQEoVQdleHBpcmVzcQJOVQN1dGNxA4hVBGFyZ3NxBChVCTEyNy4wLjAuMXEFVQBYOwAAAGZpbGU6Ly8vRDovcHNhL1B5Q2hhcm1Qcmovd2VidHJhY2tlci9jbGllbnRfc2l0ZS9wYWdlMS5odG1scQZjZGF0ZXRpbWUKZGF0ZXRpbWUKcQdVCgfeCA4PJS4JJ8CFUnEIdHEJVQVjaG9yZHEKTlUJY2FsbGJhY2tzcQtOVQhlcnJiYWNrc3EMTlUHdGFza3NldHENTlUCaWRxDlUkNmJjNGE0MGYtOTEwNi00NzIzLTk2YmUtODQzMDA3NTI4OTQycQ9VB3JldHJpZXNxEEsAVQR0YXNrcRFVFWhvbWUudGFza3MuZmluZF93aG9pc3ESVQl0aW1lbGltaXRxE05OhlUDZXRhcRROVQZrd2FyZ3NxFX1xFnUu", "headers": {}, "content-type": "application/x-python-serialize", "properties": {"body_encoding": "base64", "correlation_id": "6bc4a40f-9106-4723-96be-843007528942", "reply_to": "1c5c97f8-8946-3d1e-b5a5-a0d48b61ab2e", "delivery_info": {"priority": 0, "routing_key": "celery", "exchange": "celery"}, "delivery_mode": 2, "delivery_tag": "3e6d9d2f-1c8e-458d-a112-abf7a640acd7"}, "content-encoding": "binary"}', 1]
+DEBUG:django.db.backends:(0.016) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.023) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.002) SELECT `djkombu_queue`.`id`, `djkombu_queue`.`name` FROM `djkombu_queue` WHERE `djkombu_queue`.`name` = 'celery' ; args=('celery',)
+DEBUG:django.db.backends:(0.003) INSERT INTO `djkombu_message` (`visible`, `sent_at`, `payload`, `queue_id`) VALUES (1, '2014-08-14 12:37:55', '{\"body\": \"gAJ9cQEoVQdleHBpcmVzcQJOVQN1dGNxA4hVBGFyZ3NxBChVCTEyNy4wLjAuMXEFVQBYOwAAAGZpbGU6Ly8vRDovcHNhL1B5Q2hhcm1Qcmovd2VidHJhY2tlci9jbGllbnRfc2l0ZS9wYWdlMS5odG1scQZjZGF0ZXRpbWUKZGF0ZXRpbWUKcQdVCgfeCA4PJTcM2RCFUnEIdHEJVQVjaG9yZHEKTlUJY2FsbGJhY2tzcQtOVQhlcnJiYWNrc3EMTlUHdGFza3NldHENTlUCaWRxDlUkODBmY2UzOTktYTc1Zi00OWYzLWE3ODMtYWUzOTBkNDA4MTk3cQ9VB3JldHJpZXNxEEsAVQR0YXNrcRFVFWhvbWUudGFza3MuZmluZF93aG9pc3ESVQl0aW1lbGltaXRxE05OhlUDZXRhcRROVQZrd2FyZ3NxFX1xFnUu\", \"headers\": {}, \"content-type\": \"application/x-python-serialize\", \"properties\": {\"body_encoding\": \"base64\", \"correlation_id\": \"80fce399-a75f-49f3-a783-ae390d408197\", \"reply_to\": \"1c5c97f8-8946-3d1e-b5a5-a0d48b61ab2e\", \"delivery_info\": {\"priority\": 0, \"routing_key\": \"celery\", \"exchange\": \"celery\"}, \"delivery_mode\": 2, \"delivery_tag\": \"adeefafc-2811-435d-a09e-62a962e64ecd\"}, \"content-encoding\": \"binary\"}', 1); args=[True, u'2014-08-14 12:37:55', '{"body": "gAJ9cQEoVQdleHBpcmVzcQJOVQN1dGNxA4hVBGFyZ3NxBChVCTEyNy4wLjAuMXEFVQBYOwAAAGZpbGU6Ly8vRDovcHNhL1B5Q2hhcm1Qcmovd2VidHJhY2tlci9jbGllbnRfc2l0ZS9wYWdlMS5odG1scQZjZGF0ZXRpbWUKZGF0ZXRpbWUKcQdVCgfeCA4PJTcM2RCFUnEIdHEJVQVjaG9yZHEKTlUJY2FsbGJhY2tzcQtOVQhlcnJiYWNrc3EMTlUHdGFza3NldHENTlUCaWRxDlUkODBmY2UzOTktYTc1Zi00OWYzLWE3ODMtYWUzOTBkNDA4MTk3cQ9VB3JldHJpZXNxEEsAVQR0YXNrcRFVFWhvbWUudGFza3MuZmluZF93aG9pc3ESVQl0aW1lbGltaXRxE05OhlUDZXRhcRROVQZrd2FyZ3NxFX1xFnUu", "headers": {}, "content-type": "application/x-python-serialize", "properties": {"body_encoding": "base64", "correlation_id": "80fce399-a75f-49f3-a783-ae390d408197", "reply_to": "1c5c97f8-8946-3d1e-b5a5-a0d48b61ab2e", "delivery_info": {"priority": 0, "routing_key": "celery", "exchange": "celery"}, "delivery_mode": 2, "delivery_tag": "adeefafc-2811-435d-a09e-62a962e64ecd"}, "content-encoding": "binary"}', 1]
+DEBUG:django.db.backends:(0.021) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.017) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.018) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.019) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.019) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.025) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.023) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.019) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.015) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+WARNING:py.warnings:C:\Users\psa\ve_webtracker\lib\site-packages\celery\task\sets.py:23: CDeprecationWarning: 
+    celery.task.sets and TaskSet is deprecated and scheduled for removal in
+    version 4.0. Please use "group" instead (see the Canvas section in the userguide)
+
+  """)
+
+DEBUG:django.db.backends:(0.014) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.019) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.015) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.021) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.015) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.025) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.021) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.016) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.015) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.023) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:root:e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-14 17:52:22.136000
+INFO:root:sent the message: e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-14 17:52:22.136000
+DEBUG:django.db.backends:(0.022) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:root:e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-14 17:52:36.029000
+INFO:root:sent the message: e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-14 17:52:36.029000
+DEBUG:django.db.backends:(0.023) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.015) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+DEBUG:django.db.backends:(0.021) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:root:e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-14 17:55:39.762000
+INFO:root:sent the message: e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-14 17:55:39.762000
+DEBUG:django.db.backends:(0.016) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+DEBUG:django.db.backends:(0.007) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.id as ip_id, IP.ip_address,
+        VIS.id as visitor_id,
+        VIS.page_url,
+        VIS.referer_url,
+        VIS.datetime_of_visit
+    from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    order by VIS.page_url, VIS.datetime_of_visit;
+    ; args=None
+WARNING:py.warnings:C:\Users\psa\ve_webtracker\lib\site-packages\django\db\models\fields\__init__.py:903: RuntimeWarning: DateTimeField VisitorQueue.datetime_of_visit received a naive datetime (2014-08-14 18:41:09.713000) while time zone support is active.
+  RuntimeWarning)
+
+DEBUG:django.db.backends:(0.834) INSERT INTO `wt_visitor_queue` (`visitor_ip`, `referer_url`, `page_url`, `datetime_of_visit`) VALUES ('127.0.0.1', '', 'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', '2014-08-14 18:41:09'); args=['127.0.0.1', '', u'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', u'2014-08-14 18:41:09']
+DEBUG:django.db.backends:(0.005) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None
+WARNING:py.warnings:C:\Users\psa\ve_webtracker\lib\site-packages\django\db\models\fields\__init__.py:903: RuntimeWarning: DateTimeField VisitorQueue.datetime_of_visit received a naive datetime (2014-08-14 18:41:17.009000) while time zone support is active.
+  RuntimeWarning)
+
+DEBUG:django.db.backends:(0.000) INSERT INTO `wt_visitor_queue` (`visitor_ip`, `referer_url`, `page_url`, `datetime_of_visit`) VALUES ('127.0.0.1', '', 'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', '2014-08-14 18:41:17'); args=['127.0.0.1', '', u'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', u'2014-08-14 18:41:17']
+WARNING:py.warnings:C:\Users\psa\ve_webtracker\lib\site-packages\django\db\models\fields\__init__.py:903: RuntimeWarning: DateTimeField VisitorQueue.datetime_of_visit received a naive datetime (2014-08-14 18:41:18.058000) while time zone support is active.
+  RuntimeWarning)
+
+DEBUG:django.db.backends:(0.001) INSERT INTO `wt_visitor_queue` (`visitor_ip`, `referer_url`, `page_url`, `datetime_of_visit`) VALUES ('127.0.0.1', '', 'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', '2014-08-14 18:41:18'); args=['127.0.0.1', '', u'file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html', u'2014-08-14 18:41:18']
+DEBUG:django.db.backends:(0.005) select
+        ORG.id as organization_id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url,
+        count(*) as visits_count
+     from wt_ip IP left outer join wt_organization ORG on IP.organization_id = ORG.id
+        left outer join wt_visitor VIS on IP.id = VIS.ip_id
+    group by ORG.id, ORG.organization_name, ORG.organization_address, ORG.country,
+        IP.ip_address,
+        VIS.page_url,
+        VIS.referer_url;
+    ; args=None

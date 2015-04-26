@@ -1,0 +1,34 @@
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-07-27 19:22:50.664000
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-07-27 19:25:20.411000
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-07-27 19:27:54.046000
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-07-27 19:52:31.990000
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-07-31 21:39:52.727000
+INFO:root:sent the message: e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-07-31 21:39:52.727000
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 15:41:56.632000
+INFO:root:sent the message: e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 15:41:56.632000
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 15:44:29.124000
+INFO:root:sent the message: e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 15:44:29.124000
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 18:59:21.920000
+INFO:root:sent the message: e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 18:59:21.920000
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 19:13:55.769000
+INFO:root:sent the message: e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 19:13:55.769000
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 20:11:08.193000
+INFO:root:sent the message: e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 20:11:08.193000
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 20:14:06.917000
+INFO:root:sent the message: e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-01 20:14:06.917000
+DEBUG:root:e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-08 18:01:23
+INFO:root:sent the message: e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-08 18:01:23
+DEBUG:root:e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-08 18:01:23
+INFO:root:sent the message: e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-08 18:01:23
+DEBUG:root:e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-08 18:01:23
+INFO:root:sent the message: e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-08 18:01:23
+DEBUG:root:e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-09 22:03:47
+INFO:root:sent the message: e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-09 22:03:47
+DEBUG:root:e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-09 22:04:00
+INFO:root:sent the message: e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-09 22:04:00
+DEBUG:root:e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-09 22:04:02
+INFO:root:sent the message: e_msg = No root WHOIS server found for domain., ip_address = 127.0.0.1, page_url = file:///D:/psa/PyCharmPrj/webtracker/client_site/page1.html, datetime of visit = 2014-08-09 22:04:02
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-10 12:23:32.376000
+INFO:root:sent the message: e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-10 12:23:32.376000
+DEBUG:root:e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-10 12:35:12.716000
+INFO:root:sent the message: e_msg = Testing message service, ip_address = 0.0.0.0, page_url = testing.message.service, datetime of visit = 2014-08-10 12:35:12.716000

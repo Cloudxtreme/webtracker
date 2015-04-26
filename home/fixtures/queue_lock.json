@@ -1,0 +1,9 @@
+[
+  {
+    "model": "home.QueueLock",
+    "pk": 1,
+    "fields": {
+      "lock_on": false
+    }
+  }
+]
